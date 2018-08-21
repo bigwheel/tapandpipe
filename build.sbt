@@ -1,5 +1,12 @@
-name := "tapandpipe"
 
-version := "0.1"
+val libraries = Seq(
+  "org.scalatest" %% "scalatest" % "3.0.5" % "test"
+)
 
-scalaVersion := "2.12.6"
+lazy val root = (project in file("."))
+  .settings(
+    name := "tapandpipe",
+    version := "0.1",
+    scalaVersion := "2.12.6",
+    libraryDependencies ++= libraries,
+  )
