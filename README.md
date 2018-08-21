@@ -5,3 +5,29 @@ This is backported library of
 and
 [Tweaks to ChainingOps by dwijnand · Pull Request \#7036 · scala/scala](https://github.com/scala/scala/pull/7036)
 for scala 2.12/2.11.
+
+## Installation
+
+tapandpipe is available from maven central.
+
+Latest release: Maven Central
+
+If you use SBT you can include spray-json in your project with
+
+```scala
+libraryDependencies += "com.github.bigwheel" %% "tapandpipe" % "1.0"
+```
+
+## Usage
+
+```scala
+object Main {
+
+  def main(args: Array[String]): Unit = {
+    val a = 1
+    a.tap(println)
+
+    println(a.pipe(_ + 1))
+  }
+}
+```
