@@ -21,6 +21,8 @@ libraryDependencies += "com.github.bigwheel" %% "tapandpipe" % "1.0"
 ## Usage
 
 ```scala
+import com.github.bigwheel.util.chaining._
+
 object Main {
 
   def main(args: Array[String]): Unit = {
